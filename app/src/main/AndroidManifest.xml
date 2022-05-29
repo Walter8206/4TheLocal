@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.a4thelocal_android">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".ui.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.4TheLocalandroid"
+        android:requestLegacyExternalStorage="true">
+        <activity
+            android:name=".ui.auth.CharitySearchPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.accounts.AddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.location.LocationDetailsActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ui.accounts.OrderListActivity"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".ui.auth.ForgotPassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.BoosterPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.accounts.PasswordChangeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.auth.CharitySelectPageActivity"
+            android:exported="true" />
+        <activity android:name=".ui.auth.PricingActivity" />
+        <activity android:name=".ui.auth.BillingDetailsActivity" />
+        <activity android:name=".ui.accounts.AccountPageActivity" />
+        <activity android:name=".ui.auth.PaymentActivity" />
+        <activity android:name=".ui.auth.LoginActivity" />
+        <activity android:name=".ui.home.MainActivity"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".ui.auth.StartPageActivity"
+            android:label="@string/app_name"
+            android:theme="@style/splashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

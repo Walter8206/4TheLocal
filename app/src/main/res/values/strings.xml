@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">4TheLocal</string>
+    <string name="title_home">Home</string>
+    <string name="title_location">Location</string>
+    <string name="title_account">Account</string>
+
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="pricing_page_title">Your Digital ID are good for one year from time of purchase.</string>
+    <string name="annual_part_title">For Your Area</string>
+</resources>

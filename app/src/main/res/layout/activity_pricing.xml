@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_gravity="center"
+tools:context=".ui.home.MainActivity"
+tools:layout_editor_absoluteX="8dp"
+tools:layout_editor_absoluteY="49dp">
+
+    <ImageButton
+        android:id="@+id/bk_btn_id"
+        android:layout_width="93dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_back_btn" />
+
+    <Button
+        android:id="@+id/btn_faq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@color/white"
+        android:text="FAQ"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="90dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Pricing"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_faq"
+        app:layout_constraintStart_toEndOf="@+id/bk_btn_id"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="28dp"
+    android:layout_marginEnd="8dp"
+    android:gravity="center"
+    android:text="@string/pricing_page_title"
+    android:textSize="14sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.673"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+<ScrollView
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView2"
+    app:layout_constraintVertical_bias="1.0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/annual_price_container"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginBottom="40dp">
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border_bg1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_annual_signup"
+                android:layout_width="260dp"
+                android:layout_height="49dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/btn_continue_bg"
+                android:text="Sign Up"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="209dp"
+                android:layout_height="42dp"
+                android:background="#F6F0F0"
+                android:gravity="center"
+                android:text="ANNUAL DIGITAL ID"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/annual_part_title"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/left_price_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/left_price_btn"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:background="@drawable/drawable_price_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/middle_price_btn"
+                app:layout_constraintEnd_toStartOf="@+id/middle_price_btn"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@+id/middle_price_btn"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/tv_price_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="$59"
+                    android:textColor="#0B0A0A"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/left_price_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/left_price_btn"
+                    app:layout_constraintStart_toStartOf="@+id/left_price_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/t_l" />
+
+                <TextView
+                    android:id="@+id/t_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Annually"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/left_price_btn"
+                    app:layout_constraintStart_toStartOf="@+id/left_price_btn"
+                    app:layout_constraintTop_toTopOf="@+id/left_price_btn" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/middle_price_btn"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:background="@drawable/drawable_price_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/view3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@+id/view3"
+                tools:ignore="MissingConstraints"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_price_m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="$59"
+                    android:gravity="center"
+                    android:textColor="#0B0A0A"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/middle_price_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/middle_price_btn"
+                    app:layout_constraintStart_toStartOf="@+id/middle_price_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/t_m" />
+
+                <TextView
+                    android:id="@+id/t_m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Quarterly"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/middle_price_btn"
+                    app:layout_constraintStart_toStartOf="@+id/middle_price_btn"
+                    app:layout_constraintTop_toTopOf="@+id/middle_price_btn" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/right_price_btn"
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:background="@drawable/drawable_price_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/middle_price_btn"
+                app:layout_constraintEnd_toEndOf="@+id/view3"
+                app:layout_constraintStart_toEndOf="@+id/middle_price_btn"
+                app:layout_constraintTop_toTopOf="@+id/middle_price_btn"
+                tools:ignore="MissingConstraints"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_price_r"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="$59"
+                    android:gravity="center"
+                    android:textColor="#0B0A0A"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/right_price_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/right_price_btn"
+                    app:layout_constraintStart_toStartOf="@+id/right_price_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Monthly"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/right_price_btn"
+                    app:layout_constraintStart_toStartOf="@+id/right_price_btn"
+                    app:layout_constraintTop_toTopOf="@+id/right_price_btn" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/gift_price_container"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="269dp"-->
+<!--            android:layout_marginBottom="40dp">-->
+
+<!--            <View-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:background="@drawable/border_bg1"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_gift"-->
+<!--                android:layout_width="209dp"-->
+<!--                android:layout_height="42dp"-->
+<!--                android:background="#F6F0F0"-->
+<!--                android:gravity="center"-->
+<!--                android:text="GIFT A DIGITAL ID"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView16"-->
+<!--                android:layout_width="253dp"-->
+<!--                android:layout_height="57dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="THE GIFT THAT LASTS ALL YEAR! Everyone loves getting discounts"-->
+<!--                android:textSize="16sp"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/tv_gift"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/tv_gift"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/tv_gift" />-->
+
+<!--            <View-->
+<!--                android:id="@+id/view"-->
+<!--                android:layout_width="260dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:background="@drawable/border_bg2"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/textView16"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/textView16"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView16" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_gift_price"-->
+<!--                android:layout_width="54dp"-->
+<!--                android:layout_height="25dp"-->
+<!--                android:layout_marginStart="36dp"-->
+<!--                android:layout_marginLeft="36dp"-->
+<!--                android:text="$59"-->
+<!--                android:textColor="#020202"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/view"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/view"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/view" />-->
+
+<!--            <Button-->
+<!--                android:layout_width="132dp"-->
+<!--                android:layout_height="45dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:backgroundTint="#6DE371"-->
+<!--                android:text="LEARN MORE"-->
+<!--                android:textColor="#000000"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/view"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/view"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/view" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/button3"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:layout_marginBottom="20dp"-->
+<!--                android:backgroundTint="#F4DF25"-->
+<!--                android:text="Redeem Digital ID Coupon"-->
+<!--                android:textColor="#000000"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/view"-->
+<!--                app:layout_constraintHorizontal_bias="0.0"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/view"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/view"-->
+<!--                app:layout_constraintVertical_bias="0.0" />-->
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        -->
+<!--        -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gift_price_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border_bg1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_gift"
+                android:layout_width="209dp"
+                android:layout_height="42dp"
+                android:background="#F6F0F0"
+                android:gravity="center"
+                android:text="GIFT A DIGITAL ID"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="THE GIFT THAT LASTS ALL YEAR! \nEveryone loves getting discounts"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_gift"
+                app:layout_constraintStart_toStartOf="@+id/tv_gift"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gift" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="260dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border_bg2"
+                app:layout_constraintEnd_toEndOf="@+id/textView16"
+                app:layout_constraintStart_toStartOf="@+id/textView16"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+
+            <TextView
+                android:id="@+id/tv_gift_price"
+                android:layout_width="54dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="$49"
+                android:textColor="#020202"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toTopOf="@+id/view"
+                app:layout_constraintVertical_bias="0.485" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#F4DF25"
+                android:text="Sign Up"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/part_time_price_container"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="269dp"-->
+<!--            android:layout_marginBottom="40dp">-->
+
+<!--            <View-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:background="@drawable/border_bg1"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <View-->
+<!--                android:id="@+id/view2"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:background="@drawable/border_bg2"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/textView12"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/textView12"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView12" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_partTime"-->
+<!--                android:layout_width="209dp"-->
+<!--                android:layout_height="42dp"-->
+<!--                android:background="#F6F0F0"-->
+<!--                android:gravity="center"-->
+<!--                android:text="PART-TIME RESIDENTS"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView13"-->
+<!--                android:layout_width="253dp"-->
+<!--                android:layout_height="57dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="PAID ANNUALY.$40 GOES TO CHARITY!"-->
+<!--                android:textSize="16sp"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/tv_partTime"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/tv_partTime"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/tv_partTime" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/textView12"-->
+<!--                android:layout_width="282dp"-->
+<!--                android:layout_height="32dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Upload proof of UpNorth property address "-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/textView13"-->
+<!--                app:layout_constraintHorizontal_bias="0.551"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/textView13"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/textView13" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_pt_price"-->
+<!--                android:layout_width="77dp"-->
+<!--                android:layout_height="33dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="$99"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/view2"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/view2"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/view2" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/button5"-->
+<!--                android:layout_width="113dp"-->
+<!--                android:layout_height="45dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:backgroundTint="#F4DF25"-->
+<!--                android:text="SIGN UP"-->
+<!--                android:textColor="#000000"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/view2"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/view2"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/view2" />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/part_time_price_container"
+            android:layout_width="match_parent"
+            android:layout_height="269dp"
+            android:layout_marginBottom="40dp">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border_bg1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/border_bg2"
+                app:layout_constraintEnd_toEndOf="@+id/textView12"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <TextView
+                android:id="@+id/tv_partTime"
+                android:layout_width="209dp"
+                android:layout_height="42dp"
+                android:background="#F6F0F0"
+                android:gravity="center"
+                android:text="PART-TIME RESIDENTS"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="PAID ANNUALY.$40 GOES TO CHARITY!"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_partTime"
+                app:layout_constraintStart_toStartOf="@+id/tv_partTime"
+                app:layout_constraintTop_toBottomOf="@+id/tv_partTime" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:gravity="center"
+                android:text="Upload proof of UpNorth property address "
+                app:layout_constraintEnd_toEndOf="@+id/textView13"
+                app:layout_constraintHorizontal_bias="0.551"
+                app:layout_constraintStart_toStartOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <TextView
+                android:id="@+id/tv_pt_price"
+                android:layout_width="77dp"
+                android:layout_height="33dp"
+                android:gravity="center"
+                android:text="$99"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="@+id/view2" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="113dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:backgroundTint="#F4DF25"
+                android:text="SIGN UP"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="@+id/view2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/more_container"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/border_bg1">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="30%"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:text="of Annual seles will be donated to local charities, right here in Northern Michigan"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView17"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView17"
+                app:layout_constraintTop_toTopOf="@+id/textView17"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="0dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="24dp"
+                android:backgroundTint="#F4DF25"
+                android:gravity="center"
+                android:text="Learn More"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loadingPB"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80ffffff"
+        android:clickable="true"
+        android:visibility="visible">
+
+        <ProgressBar
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

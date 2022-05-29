@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.home.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/skip_view"
+        layout="@layout/activity_home2"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#E4CF15">
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="4TheLocal"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_title"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23"
+        app:srcCompat="@drawable/home_page_logo" />
+
+        <TextView
+            android:id="@+id/tv_northern_michigans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Northern Michigans"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/textView25"
+            app:layout_constraintStart_toStartOf="@+id/textView25"
+            app:layout_constraintTop_toBottomOf="@+id/img_title" />
+
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AN EXCLUSIVE"
+            android:textColor="#DD0707"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/img_title"
+            app:layout_constraintStart_toStartOf="@+id/img_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_northern_michigans" />
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Digital Discount Guide"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/textView25"
+            app:layout_constraintStart_toStartOf="@+id/textView25"
+            app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <Button
+        android:id="@+id/btn_acc"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FBE730"
+        android:text="MY I.D."
+        android:textColor="#050000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/btn_business"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_business"
+        app:layout_constraintTop_toBottomOf="@+id/btn_school" />
+
+    <Button
+        android:id="@+id/btn_business"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FBE730"
+        android:text="BUSINESS SIGN-UP"
+        android:textColor="#0B0000"
+        app:layout_constraintEnd_toEndOf="@+id/btn_save2"
+        app:layout_constraintStart_toStartOf="@+id/btn_save2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_save2" />
+
+    <Button
+        android:id="@+id/btn_school"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FBE730"
+        android:text="SCHOOL SIGN-UP"
+        android:textColor="#0B0000"
+        app:layout_constraintEnd_toEndOf="@+id/btn_save2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_save2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_business" />
+
+    <Button
+        android:id="@+id/btn_save2"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FBE730"
+        android:text="PLACES TO SAVE"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/textView26"
+        app:layout_constraintStart_toStartOf="@+id/textView26"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
